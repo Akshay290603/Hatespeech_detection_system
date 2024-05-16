@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hate speech detection system</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link
+      rel="stylesheet"
+      class="css"
+      href="{{ url_for('static',filename='styles/mainpage.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      class="css"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+  </head>
+  <body>
+
+
+    <header>
+      <a href="#" class="logo">Social<span>Hero</span></a>
+      <div class="menutoggle" onclick="togglemenu();"></div>
+      <ul class="navigation">
+        <li><a href="/index">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#detect">Detect HateSpeech</a></li>
+      </ul>
+    </header>
+
+    <section class="banner" id="about">
+      <div class="content">
+        <h2>Social Hero</h2>
+        <p>
+            At Social Hero, we are committed to promoting a safer online environment by harnessing the power of technology to detect and combat hate speech.
+        </p>
+        <br>
+        <p>
+            The text messages will be classified into 3 categories:
+            <p>1 :  Hate speech</p>
+            <p>2 :  Offensive language</p>
+            <p>3 :  Neither Hate speech or Offensive language</p>
+        </p>
+        
+        <a href="#detect" class="btn">Detect Now</a>
+      </div>
+    </section>
+
+    <section class="contactus" id="detect" >
+        <div>
+            <h2 class="titeText"><span>D</span>etect <span>S</span>peech <span>N</span>ow</h2>
+        </div>
+        <p style="color: aliceblue;">
+            In the following boxes please enter the username and message respectively.
+        </p>
+      <form action="/result" method="post">
+        <div class="contactform">
+            <h3><span>D</span>etect now</h3>
+            <div class="inputbox">
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="inputbox">
+                <input type="text" name="input_text" placeholder="messages" row="4" cols="50" required>
+            </div>
+        </div>
+        <br />
+        <div>
+          <input type="submit" value="Submit" class="btn" />
+        </div>
+      </form>
+    </section>
+
+    <div class="footer">
+      <p>All copy right reserved to Akshay</p>
+      <div class="icons">
+        <a
+          href="https://www.linkedin.com/in/akshay-kawale-8784ab234"
+          target="_blank"
+          ><i class="bx bxl-linkedin-square"></i
+        ></a>
+        <a href="https://github.com/Akshay290603?tab=repositories" target="_blank"
+          ><i class="bx bxl-github"></i
+        ></a>
+        <a
+          href="mailto:akshaykawle2003@gmail.com"
+          target="_blank"
+          ><i class="bx bxl-google"></i
+        ></a>
+      </div>
+    </div>
+  </body>
+</html>
